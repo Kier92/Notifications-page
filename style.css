@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Montserrat:wght@500;700&family=Open+Sans&family=Outfit:wght@400;700&family=Overpass:wght@400;600&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:wght@200;400;500;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+}
+
+.notifications {
+    width: 60%;
+    margin: 0 auto;
+    padding-block: 2.5rem;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.notification-header .heading {
+    font-size: 1.7rem;
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    font-weight: 80%;
+}
+
+.notification-header .heading span {
+    padding: .1rem .9rem;
+    font-size: 1.4rem;
+    background-color: var(--Blue);
+    color: var(--White);
+    border-radius: 8px;
+    margin-left: .5rem;
+}
+
+.notification-header .mark {
+    color: var(--Dark-grayish-blue);
+    cursor: pointer;
+}
+
+.notification-content-header {
+    display: flex;
+    gap: 1.3rem;
+    align-items: start;
+}
+
+.notification-content {
+    width: 100%;
+    line-height: 1.6rem;
+}
+
+ .notifcation-contents {
+    padding-inline: 2rem;
+}
+
+.notifcation-container {
+    margin: 2rem 0;
+}
+
+.notification-content-header p {
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+.notification-content-header img {
+    width: 65px;
+    max-width: 100%;
+}
+
+.notification-content p.comment {
+    width: 80%
+}
+
+.notification-content p > a {
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.content-right {
+    display: flex;
+    width: 100%;
+}
+
+.content-right img {
+    justify-content: flex-end;
+    max-width: 100%;
+    max-height: 100%;
+    height: 75px;
+    width: 65px;
+}
+
+.notification-content .name {
+    color: var(--Very-dark-blue);
+    margin-right: .3rem;
+}
+
+.notification-content .about {
+    margin-left: .3rem;
+    color: var(--Blue)
+}
+
+.notification-content .about.click {
+    color: var(--Grayish-blue);
+}
+
+.notification-content .ago {
+    font-size: .9rem;
+    color: var(--Grayish-blue);
+}
+
+.notification-message {
+    padding: 1rem;
+    line-height: 1.5rem;
+    max-width: 100%;
+    width: 90%;
+    margin-left: auto;
+    color: var(--Dark-grayish-blue);
+    display: none;
+}
+
+.notification-message.show-message {
+    display: block;
+}
+
+@media screen and (max-width: 800px) {
+    .notifications {
+        width: 90%;
+    }
+
+    .notification-header .heading {
+        font-size: 1.2rem;
+    }
+
+    .notification-header .heading span {
+        font-size: 1rem;
+    }
+
+    .notification-header {
+        margin-bottom: 3rem;
+    }
+
+    .notifcation-container {
+        margin: 1.5rem 0;
+    }
+
+    .notification-content p > a,
+    .notification-message,
+    .notification-content p{
+        font-size: .95rem;
+    }
+
+    .content-right img {
+        height: 60px;
+    }
+}
